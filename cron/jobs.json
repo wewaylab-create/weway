@@ -7,7 +7,7 @@
       "description": "夜间安全巡检 (Nightly Security Audit)",
       "enabled": true,
       "createdAtMs": 1775117585667,
-      "updatedAtMs": 1775117585667,
+      "updatedAtMs": 1775119210560,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -25,7 +25,13 @@
       },
       "state": {
         "nextRunAtMs": 1775156400000,
-        "runningAtMs": 1775117715124
+        "lastRunAtMs": 1775119177633,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 32927,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     }
   ]

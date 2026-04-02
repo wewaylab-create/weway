@@ -272,3 +272,23 @@ Gateway PID (systemd): 516
 Git repo: /home/gaoweiwei/.openclaw
 origin	git@github.com:wewaylab-create/weway.git (fetch)
 origin	git@github.com:wewaylab-create/weway.git (push)
+Changes:
+ agents/main/agent/auth-profiles.json               |   2 +-
+ .../8719f992-9376-47af-b3dc-f40e57aead5c.jsonl     |  59 ++++
+ .../a66c025f-ef70-4b88-9034-28bd4c5efb52.jsonl     |   7 +
+ .../be05fb0e-3f65-47de-a440-10779303f329.jsonl     |   4 +
+ agents/main/sessions/sessions.json                 | 386 +++++++++++++++++++--
+ cron/jobs.json                                     |  16 +-
+ identity/device-auth.json                          |   2 +-
+ security-reports/audit-2026-04-02_160851.txt       |  20 ++
+ security-reports/audit-2026-04-02_161600.txt       | 274 +++++++++++++++
+ 9 files changed, 731 insertions(+), 39 deletions(-)
+ 9 files changed, 732 insertions(+), 39 deletions(-)
+ create mode 100644 agents/main/sessions/a66c025f-ef70-4b88-9034-28bd4c5efb52.jsonl
+ create mode 100644 security-reports/audit-2026-04-02_161600.txt
+✅ Brain backup pushed successfully
+
+=============================================
+  Summary: 1 critical · 1 warn · 13 ok
+  Report : /home/gaoweiwei/.openclaw/security-reports/audit-2026-04-02_161600.txt
+=============================================
