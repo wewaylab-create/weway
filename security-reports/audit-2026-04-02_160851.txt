@@ -1,0 +1,275 @@
+=============================================
+  OpenClaw Nightly Security Audit Report
+  Time : 2026-04-02 16:08:51 CST
+  Host : W
+  User : gaoweiwei
+=============================================
+
+=== [1] OpenClaw Platform Audit ===
+Version: OpenClaw 2026.4.1 (da64a97)
+Service: systemd (enabled)
+File logs: /tmp/openclaw/openclaw-2026-04-02.log
+Command: /usr/bin/node /home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Service file: ~/.config/systemd/user/openclaw-gateway.service
+Service env: OPENCLAW_GATEWAY_PORT=18789
+
+Config (cli): ~/.openclaw/openclaw.json
+Config (service): ~/.openclaw/openclaw.json
+
+Gateway: bind=loopback (127.0.0.1), port=18789 (service args)
+Probe target: ws://127.0.0.1:18789
+Dashboard: http://127.0.0.1:18789/
+Probe note: Loopback-only gateway; only local clients can connect.
+
+Runtime: running (pid 516, state active, sub running, last exit 0, reason 0)
+RPC probe: ok
+
+Listening: 127.0.0.1:18789
+Troubles: run openclaw status
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+✅ Gateway is running
+
+=== [2] Process & Network Audit ===
+--- Listening Ports (TCP) ---
+State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                   
+LISTEN 0      4096       127.0.0.54:53         0.0.0.0:*                                             
+LISTEN 0      511         127.0.0.1:18789      0.0.0.0:*    users:(("openclaw-gatewa",pid=516,fd=22))
+LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                             
+LISTEN 0      4096    127.0.0.53%lo:53         0.0.0.0:*                                             
+LISTEN 0      511             [::1]:18789         [::]:*    users:(("openclaw-gatewa",pid=516,fd=23))
+
+--- Listening Ports (UDP) ---
+State  Recv-Q Send-Q  Local Address:Port Peer Address:PortProcess                                   
+UNCONN 0      0             0.0.0.0:5353      0.0.0.0:*    users:(("openclaw-gatewa",pid=516,fd=26))
+UNCONN 0      0             0.0.0.0:5353      0.0.0.0:*    users:(("openclaw-gatewa",pid=516,fd=24))
+UNCONN 0      0          127.0.0.54:53        0.0.0.0:*                                             
+UNCONN 0      0       127.0.0.53%lo:53        0.0.0.0:*                                             
+UNCONN 0      0      10.255.255.254:53        0.0.0.0:*                                             
+UNCONN 0      0           127.0.0.1:323       0.0.0.0:*                                             
+UNCONN 0      0               [::1]:323          [::]:*                                             
+
+--- Outbound Established Connections ---
+Recv-Q Send-Q  Local Address:Port  Peer Address:Port Process                                   
+0      0      172.17.159.144:42746 172.65.90.20:443   users:(("openclaw-gatewa",pid=516,fd=31))
+0      0      172.17.159.144:46992 172.65.90.20:443   users:(("openclaw-gatewa",pid=516,fd=30))
+
+--- Top 15 by CPU ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+gaoweiw+     516 12.3  1.4 22805520 455880 ?     Ssl  16:05   0:26 openclaw-gateway
+gaoweiw+     416  4.7  1.1 13488680 362112 pts/0 Sl+  16:02   0:17 openclaw-onboard
+root           1  0.0  0.0  21760 11888 ?        Ss   16:02   0:00 /sbin/init
+root          91  0.0  0.0  24880  5952 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd-udevd
+root          40  0.0  0.0  66836 18788 ?        S<s  16:02   0:00 /usr/lib/systemd/systemd-journald
+gaoweiw+     220  0.0  0.0  20468 11136 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd --user
+gaoweiw+     408  0.0  0.1 1090288 61400 pts/0   Sl+  16:02   0:00 openclaw
+root         200  0.0  0.0 107024 22656 ?        Ssl  16:02   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+syslog       184  0.0  0.0 222508  5184 ?        Ssl  16:02   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         178  0.0  0.0 1756620 12480 ?       Ssl  16:02   0:00 /usr/libexec/wsl-pro-service
+root         175  0.0  0.0  18016  8448 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd-logind
+message+     165  0.0  0.0   9520  5184 ?        Ss   16:02   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+systemd+     151  0.0  0.0  21460 12672 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     158  0.0  0.0  91028  7680 ?        Ssl  16:02   0:00 /usr/lib/systemd/systemd-timesyncd
+root         328  0.0  0.0   3140   768 ?        S    16:02   0:00 /init
+
+--- Top 15 by Memory ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+gaoweiw+     516 12.3  1.4 22805520 455880 ?     Ssl  16:05   0:26 openclaw-gateway
+gaoweiw+     416  4.7  1.1 13488680 362112 pts/0 Sl+  16:02   0:17 openclaw-onboard
+gaoweiw+     408  0.0  0.1 1090288 61400 pts/0   Sl+  16:02   0:00 openclaw
+root         200  0.0  0.0 107024 22656 ?        Ssl  16:02   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root          40  0.0  0.0  66836 18788 ?        S<s  16:02   0:00 /usr/lib/systemd/systemd-journald
+systemd+     151  0.0  0.0  21460 12672 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd-resolved
+root         178  0.0  0.0 1756620 12480 ?       Ssl  16:02   0:00 /usr/libexec/wsl-pro-service
+root           1  0.0  0.0  21760 11888 ?        Ss   16:02   0:00 /sbin/init
+gaoweiw+     220  0.0  0.0  20468 11136 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd --user
+root         175  0.0  0.0  18016  8448 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd-logind
+systemd+     158  0.0  0.0  91028  7680 ?        Ssl  16:02   0:00 /usr/lib/systemd/systemd-timesyncd
+root          91  0.0  0.0  24880  5952 ?        Ss   16:02   0:00 /usr/lib/systemd/systemd-udevd
+message+     165  0.0  0.0   9520  5184 ?        Ss   16:02   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+syslog       184  0.0  0.0 222508  5184 ?        Ssl  16:02   0:00 /usr/sbin/rsyslogd -n -iNONE
+gaoweiw+     381  0.0  0.0   6204  5184 pts/1    S+   16:02   0:00 -bash
+
+✅ No suspicious outbound connections
+
+=== [3] Sensitive Directory Changes (24h) ===
+--- /home/gaoweiwei/.openclaw (50 file(s) changed) ---
+/home/gaoweiwei/.openclaw/memory/main.sqlite
+/home/gaoweiwei/.openclaw/openclaw.json.bak.3
+/home/gaoweiwei/.openclaw/workspace/HEARTBEAT.md
+/home/gaoweiwei/.openclaw/workspace/memory/2026-04-02.md
+/home/gaoweiwei/.openclaw/workspace/MEMORY.md
+/home/gaoweiwei/.openclaw/workspace/.openclaw/workspace-state.json
+/home/gaoweiwei/.openclaw/workspace/AGENTS.md
+/home/gaoweiwei/.openclaw/workspace/TOOLS.md
+/home/gaoweiwei/.openclaw/workspace/scripts/nightly-security-audit.sh
+/home/gaoweiwei/.openclaw/workspace/.git/COMMIT_EDITMSG
+/home/gaoweiwei/.openclaw/workspace/.git/config
+/home/gaoweiwei/.openclaw/workspace/.git/HEAD
+/home/gaoweiwei/.openclaw/workspace/.git/index
+/home/gaoweiwei/.openclaw/workspace/.git/description
+/home/gaoweiwei/.openclaw/workspace/USER.md
+/home/gaoweiwei/.openclaw/workspace/SOUL.md
+/home/gaoweiwei/.openclaw/workspace/BOOTSTRAP.md
+/home/gaoweiwei/.openclaw/workspace/IDENTITY.md
+/home/gaoweiwei/.openclaw/exec-approvals.json
+/home/gaoweiwei/.openclaw/cron/jobs.json
+/home/gaoweiwei/.openclaw/media/inbound/0847c67f-c4eb-47ae-98fc-4e705fd30649.png
+/home/gaoweiwei/.openclaw/media/inbound/a97cf1fc-443c-4cf8-86a7-e9067beae97e.png
+/home/gaoweiwei/.openclaw/media/inbound/26a9665f-c14b-44f5-9937-55fa386d98fc.png
+/home/gaoweiwei/.openclaw/media/inbound/3adc4505-11a8-4311-b91c-8a9810f1cd02.png
+/home/gaoweiwei/.openclaw/.security-audit-known-issues.json
+/home/gaoweiwei/.openclaw/openclaw.json.bak
+/home/gaoweiwei/.openclaw/tasks/runs.sqlite-shm
+/home/gaoweiwei/.openclaw/tasks/runs.sqlite
+/home/gaoweiwei/.openclaw/tasks/runs.sqlite-wal
+/home/gaoweiwei/.openclaw/openclaw.json.bak.2
+/home/gaoweiwei/.openclaw/update-check.json
+/home/gaoweiwei/.openclaw/.git/COMMIT_EDITMSG
+/home/gaoweiwei/.openclaw/.git/info/exclude
+/home/gaoweiwei/.openclaw/.git/hooks/pre-rebase.sample
+/home/gaoweiwei/.openclaw/.git/hooks/prepare-commit-msg.sample
+/home/gaoweiwei/.openclaw/.git/hooks/pre-merge-commit.sample
+/home/gaoweiwei/.openclaw/.git/hooks/fsmonitor-watchman.sample
+/home/gaoweiwei/.openclaw/.git/hooks/sendemail-validate.sample
+/home/gaoweiwei/.openclaw/.git/hooks/pre-commit.sample
+/home/gaoweiwei/.openclaw/.git/hooks/push-to-checkout.sample
+/home/gaoweiwei/.openclaw/.git/hooks/post-update.sample
+/home/gaoweiwei/.openclaw/.git/hooks/commit-msg.sample
+/home/gaoweiwei/.openclaw/.git/hooks/pre-push.sample
+/home/gaoweiwei/.openclaw/.git/hooks/applypatch-msg.sample
+/home/gaoweiwei/.openclaw/.git/hooks/pre-applypatch.sample
+/home/gaoweiwei/.openclaw/.git/hooks/pre-receive.sample
+/home/gaoweiwei/.openclaw/.git/hooks/update.sample
+/home/gaoweiwei/.openclaw/.git/config
+/home/gaoweiwei/.openclaw/.git/HEAD
+/home/gaoweiwei/.openclaw/.git/index
+--- /etc (21 file(s) changed) ---
+/etc/hosts
+/etc/ld.so.cache
+/etc/hostname
+/etc/apt/preferences.d/nsolid
+/etc/apt/preferences.d/nodejs
+/etc/apt/sources.list.d/nodesource.sources
+/etc/passwd-
+/etc/gshadow-
+/etc/landscape/client.conf
+/etc/cloud/cloud-init.disabled
+/etc/subuid
+/etc/group
+/etc/subgid
+/etc/wsl.conf
+/etc/shadow
+/etc/machine-id
+/etc/passwd
+/etc/ld.so.conf.d/ld.wsl.conf
+/etc/timezone
+/etc/gshadow
+/etc/group-
+--- /home/gaoweiwei/.ssh (5 file(s) changed) ---
+/home/gaoweiwei/.ssh/known_hosts.old
+/home/gaoweiwei/.ssh/id_ed25519_github
+/home/gaoweiwei/.ssh/id_ed25519_github.pub
+/home/gaoweiwei/.ssh/known_hosts
+/home/gaoweiwei/.ssh/config
+--- /home/gaoweiwei/.gnupg (1 file(s) changed) ---
+/home/gaoweiwei/.gnupg/sshcontrol
+--- /usr/local/bin (0 file(s) changed) ---
+⚠️ WARN: 77 files changed in sensitive dirs
+
+=== [4] System Scheduled Tasks ===
+--- User crontab ---
+(no user crontab)
+
+--- /etc/cron.d/ ---
+total 16
+drwxr-xr-x  2 root root 4096 Feb 10 08:55 .
+drwxr-xr-x 88 root root 4096 Apr  2 16:02 ..
+-rw-r--r--  1 root root  102 Mar 31  2024 .placeholder
+-rw-r--r--  1 root root  201 Apr  8  2024 e2scrub_all
+
+--- systemd timers (system) ---
+NEXT                          LEFT LAST                        PASSED UNIT                         ACTIVATES
+Thu 2026-04-02 16:17:20 CST   8min -                                - systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+Fri 2026-04-03 00:00:00 CST     7h Thu 2026-04-02 14:44:58 CST      - dpkg-db-backup.timer         dpkg-db-backup.service
+Fri 2026-04-03 00:00:00 CST     7h Thu 2026-04-02 14:44:58 CST      - logrotate.timer              logrotate.service
+Fri 2026-04-03 00:09:30 CST     8h Thu 2026-04-02 14:44:58 CST      - apt-daily.timer              apt-daily.service
+Fri 2026-04-03 01:16:44 CST     9h Thu 2026-04-02 14:44:58 CST      - man-db.timer                 man-db.service
+Fri 2026-04-03 02:22:05 CST    10h Thu 2026-04-02 15:12:06 CST      - motd-news.timer              motd-news.service
+Fri 2026-04-03 06:17:51 CST    14h Thu 2026-04-02 14:44:58 CST      - apt-daily-upgrade.timer      apt-daily-upgrade.service
+Sun 2026-04-05 03:10:46 CST 2 days Thu 2026-04-02 14:44:58 CST      - e2scrub_all.timer            e2scrub_all.service
+-                                - -                                - apport-autoreport.timer      apport-autoreport.service
+-                                - -                                - fstrim.timer                 fstrim.service
+-                                - -                                - snapd.snap-repair.timer      snapd.snap-repair.service
+-                                - -                                - ua-timer.timer               ua-timer.service
+
+12 timers listed.
+
+--- systemd timers (user) ---
+NEXT                        LEFT LAST                              PASSED UNIT                           ACTIVATES
+Fri 2026-04-03 16:07:27 CST  23h Thu 2026-04-02 16:07:28 CST 1min 25s ago launchpadlib-cache-clean.timer launchpadlib-cache-clean.service
+
+1 timers listed.
+
+--- User systemd units ---
+total 16
+drwxr-xr-x 3 gaoweiwei gaoweiwei 4096 Apr  2 15:14 .
+drwxr-xr-x 3 gaoweiwei gaoweiwei 4096 Apr  2 15:14 ..
+drwxr-xr-x 2 gaoweiwei gaoweiwei 4096 Apr  2 15:14 default.target.wants
+-rw-r--r-- 1 gaoweiwei gaoweiwei 1027 Apr  2 15:14 openclaw-gateway.service
+✅ Scheduled tasks listed for review
+
+=== [5] OpenClaw Cron Jobs ===
+ID                                   Name                     Schedule                         Next       Last       Status    Target    Agent ID   Model               
+878d1279-c660-4a5e-a82c-1c613caa5bca nightly-security-audit   cron 0 3 * * * @ Asia/Shangha... in 11h     -          running   isolated  -          -
+✅ OpenClaw cron jobs listed for review
+
+=== [6] Login & SSH ===
+--- Recent logins ---
+reboot   system boot  6.6.87.2-microso Thu Apr  2 16:02   still running
+reboot   system boot  6.6.87.2-microso Thu Apr  2 15:17 - 16:01  (00:44)
+reboot   system boot  6.6.87.2-microso Thu Apr  2 14:50 - 15:16  (00:26)
+reboot   system boot  6.6.87.2-microso Thu Apr  2 14:44 - 14:49  (00:05)
+
+wtmp begins Thu Apr  2 14:44:54 2026
+
+--- SSH auth failures (last 24h) ---
+✅ No SSH auth failures in last 24h
+
+=== [7] Critical File Integrity ===
+--- Config hash baseline ---
+/home/gaoweiwei/.openclaw/openclaw.json: FAILED
+sha256sum: WARNING: 1 computed checksum did NOT match
+🚨 CRITICAL: Config file hash mismatch!
+
+--- File permissions ---
+  ✅ /home/gaoweiwei/.openclaw/openclaw.json (perm=600)
+  ✅ /home/gaoweiwei/.openclaw/devices/paired.json (perm=600)
+✅ All file permissions correct
+
+=== [8] Yellow-Line Cross Validation ===
+--- sudo commands in logs (last 24h, excluding audit commands) ---
+✅ No non-audit sudo commands in last 24h
+
+=== [9] Disk Usage ===
+--- Overall ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  3.5G  953G   1% /
+✅ Disk usage at 1%
+
+--- Large files (>100MB) created in last 24h ---
+✅ No large files (>100MB) created in last 24h
+
+=== [10] Gateway Environment Variables ===
+Gateway PID (systemd): 516
+(env check skipped — rerun with sudo if needed)
+
+=== [11] DLP Scan (Plaintext Keys/Credentials) ===
+✅ No plaintext private keys or credential patterns detected
+
+=== [12] Skill/MCP Integrity ===
+✅ No skills installed (directory empty or not found)
+
+=== [13] Brain Backup (Git Sync) ===
+Git repo: /home/gaoweiwei/.openclaw
+origin	git@github.com:wewaylab-create/weway.git (fetch)
+origin	git@github.com:wewaylab-create/weway.git (push)
