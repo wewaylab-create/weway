@@ -1,0 +1,99 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/home/gaoweiwei/.openclaw/workspace",
+      "models": {
+        "opencode/claude-opus-4-6": {
+          "alias": "Opus"
+        },
+        "opencode-go/kimi-k2.5": {
+          "alias": "Kimi"
+        },
+        "opencode-go/glm-5": {
+          "alias": "GLM"
+        },
+        "opencode-go/minimax-m2.5": {
+          "alias": "MiniMax"
+        },
+        "opencode/claude-sonnet-4-6": {}
+      },
+      "model": {
+        "primary": "opencode/claude-sonnet-4-6"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "dd323bb0ca8eaad20b6556fda0bb3af21024b8926fc0407c"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send",
+        "sms.search"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "tavily",
+        "enabled": true
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "opencode:default": {
+        "provider": "opencode",
+        "mode": "api_key"
+      },
+      "opencode-go:default": {
+        "provider": "opencode-go",
+        "mode": "api_key"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "tavily": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "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"
+          }
+        }
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-02T07:31:00.155Z",
+    "lastRunVersion": "2026.4.1",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.1",
+    "lastTouchedAt": "2026-04-02T07:31:00.191Z"
+  }
+}

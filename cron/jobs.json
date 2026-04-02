@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "878d1279-c660-4a5e-a82c-1c613caa5bca",
+      "name": "nightly-security-audit",
+      "description": "夜间安全巡检 (Nightly Security Audit)",
+      "enabled": true,
+      "createdAtMs": 1775116258768,
+      "updatedAtMs": 1775116258768,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute this command and summarize the output into a concise security report in Chinese. List all 13 items with emoji status (🚨/⚠️/✅). Start with a one-line summary showing critical/warn/ok counts. Command: bash /home/gaoweiwei/.openclaw/workspace/scripts/nightly-security-audit.sh"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1775156400000
+      }
+    }
+  ]
+}
