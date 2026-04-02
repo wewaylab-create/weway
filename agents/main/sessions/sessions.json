@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "8719f992-9376-47af-b3dc-f40e57aead5c",
-    "updatedAt": 1775117322023,
+    "updatedAt": 1775117738464,
     "providerOverride": "opencode",
     "modelOverride": "claude-opus-4-6",
     "systemSent": true,
@@ -179,13 +179,13 @@
       "version": 0
     },
     "status": "running",
-    "startedAt": 1775117321982,
+    "startedAt": 1775117627881,
     "modelProvider": "opencode",
     "model": "claude-opus-4-6",
     "contextTokens": 1000000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1775117297509,
+      "generatedAt": 1775117716598,
       "sessionId": "8719f992-9376-47af-b3dc-f40e57aead5c",
       "sessionKey": "agent:main:main",
       "provider": "opencode",
@@ -416,16 +416,18 @@
       }
     },
     "totalTokensFresh": true,
-    "inputTokens": 5,
-    "outputTokens": 174,
-    "cacheRead": 270550,
-    "cacheWrite": 775,
-    "totalTokens": 90708,
-    "channel": "webchat"
+    "inputTokens": 4,
+    "outputTokens": 158,
+    "cacheRead": 214356,
+    "cacheWrite": 590,
+    "totalTokens": 107659,
+    "channel": "webchat",
+    "endedAt": 1775117713735,
+    "runtimeMs": 12185
   },
   "agent:main:cron:878d1279-c660-4a5e-a82c-1c613caa5bca": {
     "sessionId": "be05fb0e-3f65-47de-a440-10779303f329",
-    "updatedAt": 1775117319026,
+    "updatedAt": 1775117372580,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -590,7 +592,7 @@
     "authProfileOverrideCompactionCount": 0,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1775117319300,
+      "generatedAt": 1775117341724,
       "sessionId": "be05fb0e-3f65-47de-a440-10779303f329",
       "sessionKey": "agent:main:cron:878d1279-c660-4a5e-a82c-1c613caa5bca",
       "provider": "opencode",
@@ -610,9 +612,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 23559,
-        "projectContextChars": 13208,
-        "nonProjectContextChars": 10351
+        "chars": 23394,
+        "projectContextChars": 13246,
+        "nonProjectContextChars": 10148
       },
       "injectedWorkspaceFiles": [
         {
@@ -694,8 +696,8 @@
         ]
       },
       "tools": {
-        "listChars": 1909,
-        "schemaChars": 7978,
+        "listChars": 1590,
+        "schemaChars": 7288,
         "entries": [
           {
             "name": "read",
@@ -726,12 +728,6 @@
             "summaryChars": 85,
             "schemaChars": 961,
             "propertiesCount": 12
-          },
-          {
-            "name": "cron",
-            "summaryChars": 3570,
-            "schemaChars": 690,
-            "propertiesCount": 13
           },
           {
             "name": "sessions_list",
@@ -804,11 +800,17 @@
     },
     "contextTokens": 1000000,
     "inputTokens": 4,
-    "outputTokens": 134,
-    "totalTokens": 12720,
+    "outputTokens": 998,
+    "totalTokens": 17779,
     "totalTokensFresh": true,
-    "cacheRead": 12421,
-    "cacheWrite": 12719
+    "cacheRead": 11567,
+    "cacheWrite": 17778,
+    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/be05fb0e-3f65-47de-a440-10779303f329.jsonl",
+    "status": "done",
+    "startedAt": 1775117341733,
+    "abortedLastRun": false,
+    "endedAt": 1775117372546,
+    "runtimeMs": 30813
   },
   "agent:main:cron:878d1279-c660-4a5e-a82c-1c613caa5bca:run:be05fb0e-3f65-47de-a440-10779303f329": {
     "sessionId": "be05fb0e-3f65-47de-a440-10779303f329",
@@ -1196,5 +1198,337 @@
     "totalTokensFresh": true,
     "cacheRead": 12421,
     "cacheWrite": 12719
+  },
+  "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432": {
+    "sessionId": "a66c025f-ef70-4b88-9034-28bd4c5efb52",
+    "updatedAt": 1775117716588,
+    "systemSent": true,
+    "label": "Cron: nightly-security-audit",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>tavily</name>\n    <description>Tavily web search, content extraction, and research tools.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawflow</name>\n    <description>Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/clawflow/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawflow-inbox-triage</name>\n    <description>Example ClawFlow authoring pattern for inbox triage. Use when messages need different treatment based on intent, with some routes notifying immediately, some waiting on outside answers, and others rolling into a later summary.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "tavily",
+          "requiredEnv": []
+        },
+        {
+          "name": "clawflow"
+        },
+        {
+          "name": "clawflow-inbox-triage"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "tavily",
+          "description": "Tavily web search, content extraction, and research tools.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily",
+          "source": "openclaw-extra",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md",
+            "source": "openclaw-extra",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawflow",
+          "description": "Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawflow-inbox-triage",
+          "description": "Example ClawFlow authoring pattern for inbox triage. Use when messages need different treatment based on intent, with some routes notifying immediately, some waiting on outside answers, and others rolling into a later summary.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "modelProvider": "opencode",
+    "model": "claude-sonnet-4-6",
+    "authProfileOverride": "opencode:default",
+    "authProfileOverrideSource": "auto",
+    "authProfileOverrideCompactionCount": 0,
+    "status": "running",
+    "startedAt": 1775117716558,
+    "abortedLastRun": false
+  },
+  "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432:run:a66c025f-ef70-4b88-9034-28bd4c5efb52": {
+    "sessionId": "a66c025f-ef70-4b88-9034-28bd4c5efb52",
+    "updatedAt": 1775117715214,
+    "systemSent": true,
+    "label": "Cron: nightly-security-audit",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>tavily</name>\n    <description>Tavily web search, content extraction, and research tools.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawflow</name>\n    <description>Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/clawflow/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawflow-inbox-triage</name>\n    <description>Example ClawFlow authoring pattern for inbox triage. Use when messages need different treatment based on intent, with some routes notifying immediately, some waiting on outside answers, and others rolling into a later summary.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "tavily",
+          "requiredEnv": []
+        },
+        {
+          "name": "clawflow"
+        },
+        {
+          "name": "clawflow-inbox-triage"
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "tavily",
+          "description": "Tavily web search, content extraction, and research tools.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily",
+          "source": "openclaw-extra",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md",
+            "source": "openclaw-extra",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawflow",
+          "description": "Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "clawflow-inbox-triage",
+          "description": "Example ClawFlow authoring pattern for inbox triage. Use when messages need different treatment based on intent, with some routes notifying immediately, some waiting on outside answers, and others rolling into a later summary.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/clawflow-inbox-triage"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/home/gaoweiwei/.npm-global/lib/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "modelProvider": "opencode",
+    "model": "claude-sonnet-4-6"
   }
 }
