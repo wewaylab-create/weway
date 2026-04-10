@@ -14,7 +14,8 @@
       "operator.approvals",
       "operator.admin",
       "operator.write",
-      "operator.pairing"
+      "operator.pairing",
+      "operator.talk.secrets"
     ],
     "approvedScopes": [
       "operator.read",
@@ -77,7 +78,7 @@
           "operator.write"
         ],
         "createdAtMs": 1775114788702,
-        "lastUsedAtMs": 1775119154649
+        "lastUsedAtMs": 1775731173164
       }
     },
     "createdAtMs": 1775114788702,

@@ -11,15 +11,5 @@
       "provider": "opencode-go",
       "key": "sk-ZKuNWnWPri0riz6ZV3Yr7BAYgWekVgyfeFQ91SF12tJf5uk2dEbRXDtDOigOhll2"
     }
-  },
-  "lastGood": {
-    "opencode": "opencode:default"
-  },
-  "usageStats": {
-    "opencode:default": {
-      "errorCount": 0,
-      "lastFailureAt": 1775118656373,
-      "lastUsed": 1775119210542
-    }
   }
 }

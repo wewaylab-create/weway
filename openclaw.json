@@ -48,7 +48,8 @@
         "sms.send",
         "sms.search"
       ]
-    }
+    },
+    "reload": {}
   },
   "session": {
     "dmScope": "per-channel-peer"
@@ -83,17 +84,48 @@
             "apiKey": "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"
           }
         }
+      },
+      "qqbot": {
+        "enabled": false
+      },
+      "openclaw-qqbot": {
+        "enabled": true
+      },
+      "opencode": {
+        "enabled": true
+      },
+      "opencode-go": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "openclaw-qqbot": {
+        "source": "path",
+        "sourcePath": "/tmp/.qqbot-extract-Esc98y/package",
+        "installPath": "/home/gaoweiwei/.openclaw/extensions/openclaw-qqbot",
+        "version": "1.7.1",
+        "installedAt": "2026-04-09T06:06:35.728Z"
       }
     }
   },
   "wizard": {
-    "lastRunAt": "2026-04-02T08:05:13.882Z",
-    "lastRunVersion": "2026.4.1",
+    "lastRunAt": "2026-04-09T10:38:57.672Z",
+    "lastRunVersion": "2026.4.9",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "meta": {
-    "lastTouchedVersion": "2026.4.1",
-    "lastTouchedAt": "2026-04-02T08:05:13.915Z"
+    "lastTouchedVersion": "2026.4.9",
+    "lastTouchedAt": "2026-04-09T10:38:57.808Z"
+  },
+  "channels": {
+    "qqbot": {
+      "enabled": true,
+      "allowFrom": [
+        "*"
+      ],
+      "appId": "1903801537",
+      "clientSecret": "6AEJOUahov3BKTdny9KWiv8Mbq6NewEX"
+    }
   }
 }
