@@ -233,3 +233,33 @@ Gateway PID (systemd): 309
 Git repo: /home/gaoweiwei/.openclaw
 origin	git@github.com:wewaylab-create/weway.git (fetch)
 origin	git@github.com:wewaylab-create/weway.git (push)
+Changes:
+ .upgrading                                         |     1 +
+ agents/main/agent/auth-profiles.json               |    10 -
+ agents/main/agent/auth-state.json                  |    13 +
+ .../040010fe-d985-41fb-aa6d-0a205323bdd1.jsonl     |   519 +
+ .../1d635c13-0e1c-4296-bb23-ba79a130017c.jsonl     |     8 -
+ ...5b7a4c65.jsonl.deleted.2026-04-09T06-30-26.163Z |    10 +
+ ...1da15080.jsonl.deleted.2026-04-09T06-30-26.163Z |    39 +
+ ...3a77235f.jsonl.deleted.2026-04-08T06-22-18.222Z |    14 +
+ ...e57aead5c.jsonl.reset.2026-04-08T06-28-47.173Z} |    22 +
+ .../8ee4e4b9-90b8-4eca-9c30-0c6262ffc421.jsonl     |    13 +
+ .../a66c025f-ef70-4b88-9034-28bd4c5efb52.jsonl     |    12 -
+ ...4c5efb52.jsonl.deleted.2026-04-09T06-17-23.657Z |    14 +
+ .../ce3660e9-f952-43bb-9004-9c1be2fb8286.jsonl     |     7 +
+ ...da1031a2.jsonl.deleted.2026-04-09T06-17-23.657Z |    13 +
+ agents/main/sessions/sessions.json                 |   532 +-
+ cron/jobs.json                                     |    11 +-
+ devices/paired.json                                |     5 +-
+ extensions/openclaw-qqbot/LICENSE                  |    22 +
+ extensions/openclaw-qqbot/README.md                |   505 +
+ extensions/openclaw-qqbot/README.zh.md             |   500 +
+ create mode 100644 qqbot/data/startup-marker.json
+ create mode 100644 qqbot/sessions/session-default.json
+ create mode 100644 security-reports/audit-2026-04-10_151034.txt
+✅ Brain backup pushed successfully
+
+=============================================
+  Summary: 1 critical · 0 warn · 14 ok
+  Report : /home/gaoweiwei/.openclaw/security-reports/audit-2026-04-10_151034.txt
+=============================================

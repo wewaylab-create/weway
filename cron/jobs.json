@@ -7,7 +7,7 @@
       "description": "夜间安全巡检 (Nightly Security Audit)",
       "enabled": true,
       "createdAtMs": 1775117585667,
-      "updatedAtMs": 1775693216795,
+      "updatedAtMs": 1775805121886,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -24,15 +24,48 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1775761200000,
-        "lastRunAtMs": 1775693100039,
+        "nextRunAtMs": 1775847600000,
+        "lastRunAtMs": 1775805011521,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 116756,
+        "lastDurationMs": 110365,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "runningAtMs": 1775805011506
+        "runningAtMs": 1775874435640
+      }
+    },
+    {
+      "id": "9314038d-b49b-4ecd-9954-e2a11c3c2499",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "时间胶囊·产品路演深度研究",
+      "enabled": false,
+      "deleteAfterRun": true,
+      "createdAtMs": 1775839569461,
+      "updatedAtMs": 1775840825124,
+      "schedule": {
+        "kind": "at",
+        "at": "2026-04-10T17:00:00.000Z"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "timeoutSeconds": 0,
+        "message": "你是伟伟的AI助手樱桃。你正在独立完成一项深度研究任务，项目代号「小手拉大手」，产品暂定名「时间胶囊」。\n\n这是一款以「班级」为最小单位的记忆型社交App，面向iOS平台，目标用户覆盖60后至10后所有有求学经历的人群。核心理念：时间容器，不是社交工具——用户不需要认识任何人，只需要知道自己在哪个学校、哪个年级、哪个班级待过，就可以走进那段时光的「房间」，找回记忆、找回同学。\n\n现有文档路径：\n- /home/gaoweiwei/.openclaw/workspace/时间胶囊/产品核心价值.md\n- /home/gaoweiwei/.openclaw/workspace/时间胶囊/竞品分析-校内网与人人网.md\n\n请先读取以上两份文档，充分理解产品定位，然后完成以下五项研究并分别写入对应文件：\n\n---\n\n### 任务一：数据分析与商业前景\n文件：/home/gaoweiwei/.openclaw/workspace/时间胶囊/01-数据分析与商业前景.md\n\n请通过网络搜索，完成：\n- 中国60后至10后各年代人口规模（目标用户总量估算）\n- 中国K12+大学在校及毕业人口数据\n- 校园怀旧类/同学社交类需求市场规模估算\n- 类似情感驱动型社交App的变现路径分析（会员、存储空间、纪念册印刷等）\n- 商业前景预测与变现模型建议\n\n---\n\n### 任务二：市场分析与竞品对比\n文件：/home/gaoweiwei/.openclaw/workspace/时间胶囊/02-市场分析与竞品对比.md\n\n请通过网络搜索，完成：\n- 国内现有同类/相关产品梳理（同学录App、班级圈、同学帮等）\n- 国际参考产品（ClassDojo、Facebook Groups、Classmates.com等）\n- 各竞品的核心功能、用户规模、优劣势\n- 时间胶囊的差异化优势与空白市场定位\n- 四象限竞品图（文字描述版）\n\n---\n\n### 任务三：现有商业模式对比\n文件：/home/gaoweiwei/.openclaw/workspace/时间胶囊/03-商业模式对比.md\n\n请分析以下商业模式，结合时间胶囊产品特性，给出最适合的模型建议：\n- Freemium（免费+付费会员）\n- 内容存储付费（扩容）\n- 实体周边变现（纪念册、照片印刷）\n- B端合作（学校官方合作、教育机构）\n- 广告模式（不推荐，说明原因）\n- 数据价值（隐私边界分析）\n\n---\n\n### 任务四：立项文档\n文件：/home/gaoweiwei/.openclaw/workspace/时间胶囊/04-立项文档.md\n\n请撰写完整立项文档，包含：\n- 项目背景与立项原因\n- 产品定义与核心价值主张\n- 目标用户画像（分年代详述）\n- 核心功能列表（MVP最小可行产品版本）\n- 产品三大原则（实名制/半开放/用户自主权限）\n- 技术架构初步设想\n- 团队需求（需要什么角色）\n- 风险与应对策略\n\n---\n\n### 任务五：路标规划与里程碑拆解\n文件：/home/gaoweiwei/.openclaw/workspace/时间胶囊/05-路标规划与里程碑.md\n\n请制定从0到1的完整路标，包含：\n- 阶段一（0-3个月）：概念验证与MVP设计\n- 阶段二（3-6个月）：开发与内测\n- 阶段三（6-12个月）：上线与种子用户增长\n- 阶段四（12-24个月）：规模化扩张\n- 每个阶段的核心里程碑、关键指标（KPI）、资源需求\n- 融资节点建议（Pre-seed / Seed / Series A）\n\n---\n\n所有文档格式要求：\n- 使用中文\n- Markdown格式，结构清晰\n- 包含数据来源标注（搜索到的数据请注明）\n- 语言专业，适合对投资人展示\n- 文档顶部注明「🔒 内部文档 · 项目代号：小手拉大手」\n\n完成所有五份文档后，在 /home/gaoweiwei/.openclaw/workspace/时间胶囊/梦境报告-0411.md 写一份简短总结，说明完成了哪些内容、有哪些关键发现、以及你对这个产品的判断。\n\n开始工作吧。"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "lastRunAtMs": 1775840400026,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 425098,
+        "lastError": "Delivering to QQ Bot requires target QQ Bot 目标格式: qqbot:c2c:openid (私聊) 或 qqbot:group:groupid (群聊)",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     }
   ]
