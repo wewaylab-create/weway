@@ -259,3 +259,33 @@ Gateway PID (systemd): 5518
 Git repo: /home/gaoweiwei/.openclaw
 origin	git@github.com:wewaylab-create/weway.git (fetch)
 origin	git@github.com:wewaylab-create/weway.git (push)
+Changes:
+ agents/main/agent/auth-state.json                  |    4 +-
+ ...05323bdd1.jsonl.reset.2026-04-10T07-40-07.050Z} |    0
+ .../3e2d05cc-a11a-490d-9b9c-7186a721c7bb.jsonl     |   28 +
+ .../5654fe4e-61cc-4816-a018-61fd9733bfbe.jsonl     |    7 +
+ ...5b7a4c65.jsonl.deleted.2026-04-09T06-30-26.163Z |   10 -
+ .../65351122-b50e-42d4-ac08-6f1adedcf39e.jsonl     |  195 +++
+ ...1da15080.jsonl.deleted.2026-04-09T06-30-26.163Z |   39 -
+ ...3a77235f.jsonl.deleted.2026-04-08T06-22-18.222Z |   14 -
+ ...4c5efb52.jsonl.deleted.2026-04-09T06-17-23.657Z |   14 -
+ ...4c5efb52.jsonl.deleted.2026-04-10T07-13-01.914Z |    6 +
+ .../ce3660e9-f952-43bb-9004-9c1be2fb8286.jsonl     |    4 +
+ ...da1031a2.jsonl.deleted.2026-04-09T06-17-23.657Z |   13 -
+ agents/main/sessions/sessions.json                 | 1594 +++++++++++++++-----
+ cron/jobs.json                                     |   43 +-
+ devices/paired.json                                |    2 +-
+ identity/device-auth.json                          |    2 +-
+ memory/main.sqlite                                 |  Bin 118784 -> 118784 bytes
+ openclaw.json                                      |   11 +-
+ qqbot/data/credential-backup.json                  |    2 +-
+ qqbot/sessions/session-default.json                |    6 +-
+ create mode 100644 agents/main/sessions/a66c025f-ef70-4b88-9034-28bd4c5efb52.jsonl.deleted.2026-04-10T07-13-01.914Z
+ delete mode 100644 agents/main/sessions/ec8e1d0d-778a-4a9e-ae30-16acda1031a2.jsonl.deleted.2026-04-09T06-17-23.657Z
+ create mode 100644 security-reports/audit-2026-04-11_105743.txt
+✅ Brain backup pushed successfully
+
+=============================================
+  Summary: 1 critical · 0 warn · 14 ok
+  Report : /home/gaoweiwei/.openclaw/security-reports/audit-2026-04-11_105743.txt
+=============================================
