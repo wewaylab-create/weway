@@ -1,0 +1,15 @@
+{
+  "id": "1b41e15f-171f-47ad-8906-42b8d1a0712b",
+  "enqueuedAt": 1776044543418,
+  "channel": "qqbot",
+  "to": "heartbeat",
+  "payloads": [
+    {
+      "text": "⚠️ Cron job \"知交·投资人核心逻辑深度研究\" failed: ⚠️ opencode (claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your opencode billing dashboard and top up or switch to a different API key."
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 4,
+  "lastAttemptAt": 1776092173670,
+  "lastError": "API Error [/v2/users/heartbeat/messages]: invalid request"
+}
