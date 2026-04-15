@@ -247,3 +247,33 @@ Gateway PID (systemd): 603
 Git repo: /home/gaoweiwei/.openclaw
 origin	git@github.com:wewaylab-create/weway.git (fetch)
 origin	git@github.com:wewaylab-create/weway.git (push)
+Changes:
+ agents/main/agent/auth-state.json                  |    4 +-
+ .../2f74d7cc-0403-4a5a-98f3-5dd96e1b038a.jsonl     |   12 +
+ .../39ded50a-fd4b-401e-9139-a46a753a82f7.jsonl     |    7 +
+ ...97e364d2.jsonl.deleted.2026-04-13T01-42-23.358Z |    7 +
+ ...733bfbe.jsonl.deleted.2026-04-12T03-52-04.374Z} |    0
+ ...adedcf39e.jsonl.reset.2026-04-14T02-33-59.266Z} |  179 +++
+ .../78b8eab0-751d-4bec-8587-9e873adba681.jsonl     |    7 +
+ ...262ffc421.jsonl.reset.2026-04-13T01-53-48.354Z} |    0
+ ...4c5efb52.jsonl.deleted.2026-04-10T07-13-01.914Z |    6 -
+ ...4c5efb52.jsonl.deleted.2026-04-11T07-11-28.303Z |    8 -
+ ...4c5efb52.jsonl.deleted.2026-04-13T01-42-23.450Z |    8 +
+ .../af912137-c808-45aa-b74a-3b8e122cfe13.jsonl     |    7 -
+ ...122cfe13.jsonl.deleted.2026-04-13T01-42-23.450Z |   11 +
+ .../bc930af7-40c2-49df-b989-c3eee313d208.jsonl     |   55 +
+ ...e2fb8286.jsonl.deleted.2026-04-11T07-11-28.302Z |   11 -
+ .../edd1498f-2d88-4a12-a352-d9658538a953.jsonl     |   51 +
+ agents/main/sessions/sessions.json                 | 1652 +++++++++++++++++---
+ cron/jobs.json                                     |  106 +-
+ .../1b41e15f-171f-47ad-8906-42b8d1a0712b.json      |   15 +
+ devices/paired.json                                |    2 +-
+ create mode 100644 agents/main/sessions/edd1498f-2d88-4a12-a352-d9658538a953.jsonl
+ create mode 100644 delivery-queue/1b41e15f-171f-47ad-8906-42b8d1a0712b.json
+ create mode 100644 security-reports/audit-2026-04-14_104338.txt
+✅ Brain backup pushed successfully
+
+=============================================
+  Summary: 1 critical · 0 warn · 14 ok
+  Report : /home/gaoweiwei/.openclaw/security-reports/audit-2026-04-14_104338.txt
+=============================================

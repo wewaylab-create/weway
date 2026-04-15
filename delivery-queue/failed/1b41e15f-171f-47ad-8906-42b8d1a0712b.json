@@ -9,7 +9,7 @@
     }
   ],
   "bestEffort": false,
-  "retryCount": 4,
-  "lastAttemptAt": 1776092173670,
+  "retryCount": 5,
+  "lastAttemptAt": 1776160042022,
   "lastError": "API Error [/v2/users/heartbeat/messages]: invalid request"
 }

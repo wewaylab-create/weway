@@ -116,14 +116,14 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-04-13T14:58:19.599Z",
+    "lastRunAt": "2026-04-14T13:05:52.961Z",
     "lastRunVersion": "2026.4.9",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "meta": {
     "lastTouchedVersion": "2026.4.9",
-    "lastTouchedAt": "2026-04-13T14:58:19.714Z"
+    "lastTouchedAt": "2026-04-14T13:05:53.103Z"
   },
   "channels": {
     "qqbot": {
