@@ -246,3 +246,33 @@ Gateway PID (systemd): 281
 Git repo: /home/gaoweiwei/.openclaw
 origin	git@github.com:wewaylab-create/weway.git (fetch)
 origin	git@github.com:wewaylab-create/weway.git (push)
+Changes:
+ agents/main/agent/auth-state.json                  |    2 +-
+ agents/main/agent/models.json                      |   78 +
+ .../2f74d7cc-0403-4a5a-98f3-5dd96e1b038a.jsonl     |  107 ++
+ ...53a82f7.jsonl.deleted.2026-04-14T02-44-21.520Z} |    0
+ ...97e364d2.jsonl.deleted.2026-04-13T01-42-23.358Z |    7 -
+ ...9733bfbe.jsonl.deleted.2026-04-12T03-52-04.374Z |   11 -
+ .../78b8eab0-751d-4bec-8587-9e873adba681.jsonl     |    4 +
+ .../a66c025f-ef70-4b88-9034-28bd4c5efb52.jsonl     |    8 +
+ ...4c5efb52.jsonl.deleted.2026-04-13T01-42-23.450Z |    8 -
+ ...122cfe13.jsonl.deleted.2026-04-13T01-42-23.450Z |   11 -
+ .../d0be71a9-dd06-4f43-8706-3f732615ad9a.jsonl     |    6 +
+ agents/main/sessions/sessions.json                 | 1656 +++-----------------
+ cron/jobs.json                                     |   30 +-
+ .../1b41e15f-171f-47ad-8906-42b8d1a0712b.json      |    4 +-
+ devices/paired.json                                |    2 +-
+ identity/device-auth.json                          |    2 +-
+ memory/main.sqlite                                 |  Bin 163840 -> 430080 bytes
+ openclaw.json                                      |    4 +-
+ qqbot/data/credential-backup.json                  |    2 +-
+ qqbot/sessions/session-default.json                |    8 +-
+ create mode 100644 agents/main/sessions/d0be71a9-dd06-4f43-8706-3f732615ad9a.jsonl
+ rename delivery-queue/{ => failed}/1b41e15f-171f-47ad-8906-42b8d1a0712b.json (91%)
+ create mode 100644 security-reports/audit-2026-04-15_084841.txt
+✅ Brain backup pushed successfully
+
+=============================================
+  Summary: 1 critical · 0 warn · 14 ok
+  Report : /home/gaoweiwei/.openclaw/security-reports/audit-2026-04-15_084841.txt
+=============================================
