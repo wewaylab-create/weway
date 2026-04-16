@@ -7,7 +7,7 @@
       "description": "夜间安全巡检 (Nightly Security Audit)",
       "enabled": true,
       "createdAtMs": 1775117585667,
-      "updatedAtMs": 1776214146132,
+      "updatedAtMs": 1776279654524,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -24,15 +24,15 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1776279600000,
-        "lastRunAtMs": 1776214109898,
+        "nextRunAtMs": 1776366000000,
+        "lastRunAtMs": 1776279600009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 36234,
+        "lastDurationMs": 54515,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "runningAtMs": 1776279600002
+        "runningAtMs": 1776366000031
       }
     },
     {
@@ -143,7 +143,7 @@
       "description": "[managed-by=memory-core.short-term-promotion] Promote weighted short-term recalls into MEMORY.md (limit=10, minScore=0.800, minRecallCount=3, minUniqueQueries=3, recencyHalfLifeDays=14, maxAgeDays=30).",
       "enabled": true,
       "createdAtMs": 1776083561697,
-      "updatedAtMs": 1776214146136,
+      "updatedAtMs": 1776279687071,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *"
@@ -155,14 +155,14 @@
         "text": "__openclaw_memory_core_short_term_promotion_dream__"
       },
       "state": {
-        "nextRunAtMs": 1776279600000,
-        "lastRunAtMs": 1776214146132,
+        "nextRunAtMs": 1776366000000,
+        "lastRunAtMs": 1776279654524,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 4,
+        "lastDurationMs": 32547,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "runningAtMs": 1776279600002
+        "runningAtMs": 1776366000031
       }
     },
     {
@@ -170,10 +170,10 @@
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "name": "知交·投资人汇报文件整合",
-      "enabled": true,
+      "enabled": false,
       "deleteAfterRun": true,
       "createdAtMs": 1776272357852,
-      "updatedAtMs": 1776272571830,
+      "updatedAtMs": 1776321688061,
       "schedule": {
         "kind": "at",
         "at": "2026-04-16T17:00:00.000Z"
@@ -189,7 +189,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1776358800000
+        "lastRunAtMs": 1776321192287,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 495774,
+        "lastError": "Delivering to QQ Bot requires target QQ Bot 目标格式: qqbot:c2c:openid (私聊) 或 qqbot:group:groupid (群聊)",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     }
   ]
