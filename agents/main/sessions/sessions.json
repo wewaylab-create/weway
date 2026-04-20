@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
-    "sessionId": "cd0c71d3-0d4f-4ff1-93af-b45093b83992",
-    "updatedAt": 1776452447375,
+    "sessionId": "9145f3e9-aba5-4969-af97-740bfdeb124a",
+    "updatedAt": 1776611433857,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -14,7 +14,7 @@
       "surface": "webchat",
       "chatType": "direct"
     },
-    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/cd0c71d3-0d4f-4ff1-93af-b45093b83992.jsonl",
+    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/9145f3e9-aba5-4969-af97-740bfdeb124a.jsonl",
     "compactionCount": 0,
     "skillsSnapshot": {
       "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>tavily</name>\n    <description>Tavily web search, content extraction, and research tools.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/dist/extensions/tavily/skills/tavily/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>qqbot-channel</name>\n    <description>QQ 频道管理技能。查询频道列表、子频道、成员、发帖、公告、日程等操作。使用 qqbot_channel_api 工具代理 QQ 开放平台 HTTP 接口，自动处理 Token 鉴权。当用户需要查看频道、管理子频道、查询成员、发布帖子/公告/日程时使用此技能。</description>\n    <location>~/.openclaw/extensions/openclaw-qqbot/skills/qqbot-channel/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>qqbot-remind</name>\n    <description>QQBot 定时提醒。支持一次性和周期性提醒的创建、查询、取消。当通过 QQ 通道通信且涉及提醒/定时任务时使用。</description>\n    <location>~/.openclaw/extensions/openclaw-qqbot/skills/qqbot-remind/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>qqbot-media</name>\n    <description>QQBot 富媒体收发能力。使用 &lt;qqmedia&gt; 标签，系统根据文件扩展名自动识别类型（图片/语音/视频/文件）。</description>\n    <location>~/.openclaw/extensions/openclaw-qqbot/skills/qqbot-media/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>qqbot-upgrade</name>\n    <description>通过官方脚本将 openclaw-qqbot 插件升级到最新 npm 版本。当用户要求更新 QQ 机器人插件、升级 qqbot 扩展或同步官方最新版时使用。</description>\n    <location>~/.openclaw/extensions/openclaw-qqbot/skills/qqbot-upgrade/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>taskflow</name>\n    <description>Use when work should span one or more detached tasks but still behave like one job with a single owner context. TaskFlow is the durable flow substrate under authoring layers like Lobster, ACPX, plugins, or plain code. Keep conditional logic in the caller; use TaskFlow for flow identity, child-task linkage, waiting state, revision-checked mutations, and user-facing emergence.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/taskflow/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>taskflow-inbox-triage</name>\n    <description>Example TaskFlow authoring pattern for inbox triage. Use when messages need different treatment based on intent, with some routes notifying immediately, some waiting on outside answers, and others rolling into a later summary.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/taskflow-inbox-triage/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.npm-global/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
@@ -248,19 +248,20 @@
       "version": 0
     },
     "status": "done",
-    "startedAt": 1776392761696,
+    "startedAt": 1776611386013,
     "modelProvider": "opencode",
     "model": "claude-sonnet-4-6",
+    "contextTokens": 200000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1776392893919,
-      "sessionId": "cd0c71d3-0d4f-4ff1-93af-b45093b83992",
+      "generatedAt": 1776611425744,
+      "sessionId": "9145f3e9-aba5-4969-af97-740bfdeb124a",
       "sessionKey": "agent:main:main",
       "provider": "opencode",
       "model": "claude-sonnet-4-6",
       "workspaceDir": "/home/gaoweiwei/.openclaw/workspace",
-      "bootstrapMaxChars": 20000,
-      "bootstrapTotalMaxChars": 150000,
+      "bootstrapMaxChars": 12000,
+      "bootstrapTotalMaxChars": 60000,
       "bootstrapTruncation": {
         "warningMode": "once",
         "warningShown": false,
@@ -492,26 +493,25 @@
           },
           {
             "name": "memory_get",
-            "summaryChars": 207,
+            "summaryChars": 239,
             "schemaChars": 249,
             "propertiesCount": 4
           }
         ]
       }
     },
-    "cacheRead": 76796,
-    "cacheWrite": 84451,
+    "inputTokens": 3,
+    "outputTokens": 341,
+    "cacheRead": 90443,
+    "cacheWrite": 276,
+    "totalTokens": 90722,
     "totalTokensFresh": true,
+    "channel": "webchat",
     "authProfileOverride": "opencode:default",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0,
-    "channel": "webchat",
-    "contextTokens": 200000,
-    "inputTokens": 4,
-    "outputTokens": 8147,
-    "totalTokens": 84452,
-    "endedAt": 1776392819616,
-    "runtimeMs": 57920
+    "endedAt": 1776611396799,
+    "runtimeMs": 10786
   },
   "agent:main:cron:878d1279-c660-4a5e-a82c-1c613caa5bca": {
     "sessionId": "be05fb0e-3f65-47de-a440-10779303f329",
@@ -901,8 +901,8 @@
     "runtimeMs": 30813
   },
   "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432": {
-    "sessionId": "99005a8f-b374-47a3-9376-5a82148ac231",
-    "updatedAt": 1776538805614,
+    "sessionId": "9b99357d-31f2-4164-87db-296fd04bd014",
+    "updatedAt": 1776652852244,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -1067,8 +1067,8 @@
     "authProfileOverrideCompactionCount": 0,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1776452487108,
-      "sessionId": "c436892d-a7db-4715-9d9e-92d101201fff",
+      "generatedAt": 1776538857462,
+      "sessionId": "99005a8f-b374-47a3-9376-5a82148ac231",
       "sessionKey": "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432",
       "provider": "opencode",
       "model": "claude-sonnet-4-6",
@@ -1275,13 +1275,13 @@
     },
     "contextTokens": 1000000,
     "inputTokens": 3,
-    "outputTokens": 27,
+    "outputTokens": 34,
     "totalTokensFresh": true,
     "cacheRead": 0,
-    "cacheWrite": 20156,
-    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/99005a8f-b374-47a3-9376-5a82148ac231.jsonl",
+    "cacheWrite": 20393,
+    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/9b99357d-31f2-4164-87db-296fd04bd014.jsonl",
     "status": "running",
-    "startedAt": 1776538805602,
+    "startedAt": 1776652852228,
     "abortedLastRun": false,
     "chatType": "direct",
     "origin": {
@@ -1290,7 +1290,7 @@
       "from": "heartbeat",
       "to": "heartbeat"
     },
-    "totalTokens": 20159
+    "totalTokens": 20396
   },
   "agent:main:qqbot:direct:77be6796707b0237771f2b7458e585a8": {
     "sessionId": "edd1498f-2d88-4a12-a352-d9658538a953",
@@ -5062,9 +5062,9 @@
     "endedAt": 1776352219199,
     "runtimeMs": 307778
   },
-  "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432:run:c436892d-a7db-4715-9d9e-92d101201fff": {
-    "sessionId": "c436892d-a7db-4715-9d9e-92d101201fff",
-    "updatedAt": 1776452400085,
+  "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432:run:99005a8f-b374-47a3-9376-5a82148ac231": {
+    "sessionId": "99005a8f-b374-47a3-9376-5a82148ac231",
+    "updatedAt": 1776538800043,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -5229,8 +5229,8 @@
     "authProfileOverrideCompactionCount": 0,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1776452406002,
-      "sessionId": "c436892d-a7db-4715-9d9e-92d101201fff",
+      "generatedAt": 1776538805591,
+      "sessionId": "99005a8f-b374-47a3-9376-5a82148ac231",
       "sessionKey": "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432",
       "provider": "opencode",
       "model": "claude-sonnet-4-6",
@@ -5436,14 +5436,14 @@
       }
     },
     "contextTokens": 1000000,
-    "inputTokens": 6,
-    "outputTokens": 1248,
+    "inputTokens": 8,
+    "outputTokens": 1465,
     "totalTokensFresh": true,
-    "cacheRead": 35750,
-    "cacheWrite": 18833,
-    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/c436892d-a7db-4715-9d9e-92d101201fff.jsonl",
+    "cacheRead": 57569,
+    "cacheWrite": 30617,
+    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/99005a8f-b374-47a3-9376-5a82148ac231.jsonl",
     "status": "done",
-    "startedAt": 1776366097292,
+    "startedAt": 1776452487116,
     "abortedLastRun": false,
     "chatType": "direct",
     "origin": {
@@ -5452,13 +5452,13 @@
       "from": "heartbeat",
       "to": "heartbeat"
     },
-    "totalTokens": 18834,
-    "endedAt": 1776366103100,
-    "runtimeMs": 5808
+    "totalTokens": 19124,
+    "endedAt": 1776452491262,
+    "runtimeMs": 4146
   },
-  "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432:run:99005a8f-b374-47a3-9376-5a82148ac231": {
-    "sessionId": "99005a8f-b374-47a3-9376-5a82148ac231",
-    "updatedAt": 1776538800043,
+  "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432:run:9b99357d-31f2-4164-87db-296fd04bd014": {
+    "sessionId": "9b99357d-31f2-4164-87db-296fd04bd014",
+    "updatedAt": 1776652842023,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -5623,8 +5623,8 @@
     "authProfileOverrideCompactionCount": 0,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1776452487108,
-      "sessionId": "c436892d-a7db-4715-9d9e-92d101201fff",
+      "generatedAt": 1776538857462,
+      "sessionId": "99005a8f-b374-47a3-9376-5a82148ac231",
       "sessionKey": "agent:main:cron:a6d4eef5-f6fe-4fdb-9ae6-dfd0e21cf432",
       "provider": "opencode",
       "model": "claude-sonnet-4-6",
@@ -5831,13 +5831,13 @@
     },
     "contextTokens": 1000000,
     "inputTokens": 3,
-    "outputTokens": 27,
+    "outputTokens": 34,
     "totalTokensFresh": true,
     "cacheRead": 0,
-    "cacheWrite": 20156,
-    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/99005a8f-b374-47a3-9376-5a82148ac231.jsonl",
+    "cacheWrite": 20393,
+    "sessionFile": "/home/gaoweiwei/.openclaw/agents/main/sessions/9b99357d-31f2-4164-87db-296fd04bd014.jsonl",
     "status": "done",
-    "startedAt": 1776452487116,
+    "startedAt": 1776538857470,
     "abortedLastRun": false,
     "chatType": "direct",
     "origin": {
@@ -5846,8 +5846,8 @@
       "from": "heartbeat",
       "to": "heartbeat"
     },
-    "totalTokens": 20159,
-    "endedAt": 1776452491262,
-    "runtimeMs": 4146
+    "totalTokens": 20396,
+    "endedAt": 1776538859851,
+    "runtimeMs": 2381
   }
 }

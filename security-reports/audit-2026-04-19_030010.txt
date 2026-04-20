@@ -231,3 +231,31 @@ Gateway PID (systemd): 300
 Git repo: /home/gaoweiwei/.openclaw
 origin	git@github.com:wewaylab-create/weway.git (fetch)
 origin	git@github.com:wewaylab-create/weway.git (push)
+Changes:
+ agents/main/agent/auth-state.json                  |   2 +-
+ ...e9c8553.jsonl.deleted.2026-04-17T19-01-23.627Z} |  14 +-
+ ...f339b9f5.jsonl.deleted.2026-04-17T19-01-06.115Z |   7 +
+ ...4e3a6ec.jsonl.deleted.2026-04-17T19-05-03.260Z} |   0
+ ...784b668d.jsonl.deleted.2026-04-16T19-01-15.246Z |   7 -
+ .../99005a8f-b374-47a3-9376-5a82148ac231.jsonl     |   6 +
+ ...27b134a0.jsonl.deleted.2026-04-16T19-01-34.294Z |  19 --
+ .../c436892d-a7db-4715-9d9e-92d101201fff.jsonl     |   9 +
+ ...2615ad9a.jsonl.deleted.2026-04-16T00-49-28.633Z |   9 -
+ agents/main/sessions/sessions.json                 |  72 +++----
+ cron/jobs.json                                     |  20 +-
+ identity/device-auth.json                          |   2 +-
+ memory/main.sqlite                                 | Bin 1155072 -> 1515520 bytes
+ qqbot/data/credential-backup.json                  |   2 +-
+ qqbot/sessions/session-default.json                |   8 +-
+ security-reports/audit-2026-04-18_030011.txt       |  29 +++
+ security-reports/audit-2026-04-19_030010.txt       | 233 +++++++++++++++++++++
+ 17 files changed, 344 insertions(+), 95 deletions(-)
+ delete mode 100644 agents/main/sessions/c115aa03-1f9b-45a4-8192-666427b134a0.jsonl.deleted.2026-04-16T19-01-34.294Z
+ delete mode 100644 agents/main/sessions/d0be71a9-dd06-4f43-8706-3f732615ad9a.jsonl.deleted.2026-04-16T00-49-28.633Z
+ create mode 100644 security-reports/audit-2026-04-19_030010.txt
+✅ Brain backup pushed successfully
+
+=============================================
+  Summary: 1 critical · 0 warn · 14 ok
+  Report : /home/gaoweiwei/.openclaw/security-reports/audit-2026-04-19_030010.txt
+=============================================
