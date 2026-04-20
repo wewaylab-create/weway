@@ -7,7 +7,7 @@
       "description": "夜间安全巡检 (Nightly Security Audit)",
       "enabled": true,
       "createdAtMs": 1775117585667,
-      "updatedAtMs": 1776538851998,
+      "updatedAtMs": 1776653870254,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -24,15 +24,15 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1776625200000,
-        "lastRunAtMs": 1776538800027,
+        "nextRunAtMs": 1776711600000,
+        "lastRunAtMs": 1776652842009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 51971,
+        "lastDurationMs": 1028245,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "runningAtMs": 1776652841948
+        "runningAtMs": 1776711600004
       }
     },
     {
@@ -143,7 +143,7 @@
       "description": "[managed-by=memory-core.short-term-promotion] Promote weighted short-term recalls into MEMORY.md (limit=10, minScore=0.800, minRecallCount=3, minUniqueQueries=3, recencyHalfLifeDays=14, maxAgeDays=30).",
       "enabled": true,
       "createdAtMs": 1776083561697,
-      "updatedAtMs": 1776538891266,
+      "updatedAtMs": 1776653914416,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *"
@@ -155,14 +155,14 @@
         "text": "__openclaw_memory_core_short_term_promotion_dream__"
       },
       "state": {
-        "nextRunAtMs": 1776625200000,
-        "lastRunAtMs": 1776538851998,
+        "nextRunAtMs": 1776711600000,
+        "lastRunAtMs": 1776653870254,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 39268,
+        "lastDurationMs": 44162,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "runningAtMs": 1776652841948
+        "runningAtMs": 1776711600004
       }
     },
     {
